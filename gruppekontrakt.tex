@@ -1,0 +1,147 @@
+% Dokumentklassen s?tes til memoir.
+% Manual: http://ctan.org/tex-archive/macros/latex/contrib/memoir/memman.pdf
+\documentclass[a4paper,oneside,article]{memoir}
+
+\usepackage{cmap}
+
+% Danske udtryk (fx figur og tabel) samt dansk orddeling og fonte med
+% danske tegn. Hvis LaTeX brokker sig over ? ? og ?skal du udskifte
+% "utf8" med "latin1" eller "applemac".
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel} % 'danish' erstattes med 'english', hvis der skrives p?engelsk
+\usepackage[T1]{fontenc}
+
+
+%\usepackage{hyperref}
+\usepackage[pdftex, pdfborderstyle={/S/U/W 0}]{hyperref} % this disables the boxes around links
+
+\usepackage{hyperref} %for clickable urls
+\usepackage{easylist}
+\usepackage{float}
+\usepackage{lastpage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\navn}{Mark Moore }
+\newcommand{\fuldenavn}{Mark Robert Nygaard Moore }
+\newcommand{\studnr}{20061263 }
+\newcommand{\hold}{IT3 }
+\newcommand{\email}{mark@moore.dk }
+\newcommand{\mobil}{24404972 }
+
+
+\newcommand{\fag}{Gruppekontrakt }
+\newcommand{\titel}{For HTTP/1.1 418 }
+%Aflevering nummer:
+\setcounter{chapter}{1}
+
+% Section numbering depth
+%\setcounter{secnumdepth}{3}
+\setsecnumdepth{subsection}
+
+
+%make section number appear AFTER section name:
+%\usepackage[explicit]{titlesec}
+%\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\ \thesection}
+
+%TOC depth
+\setcounter{tocdepth}{2}
+
+% Inds?telse af grafik.
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Header
+\setheaderspaces{*}{5\onelineskip}{*}
+\makepagestyle{sitin}
+
+% Margin
+\setlrmarginsandblock{2cm}{2cm}{*}
+\checkandfixthelayout
+\newcommand{\pagewidth}{\textwidth}  % 17 cm
+\newcommand{\pageheight}{\textheight} % 20 cm
+
+\makeoddhead{sitin}
+	%Left
+	{
+		\includegraphics[height=4\onelineskip]{LargeAULogo.png}
+	}
+	%Center
+	{
+		\fag \\
+		\titel \\
+	}
+	%Right
+	{
+		\includegraphics[height=4\onelineskip]{kimJongTeapot.jpg}
+	}
+\makeoddfoot{sitin}{}{}{Side \thepage\space af \pageref{LastPage}}
+
+\makeheadrule{sitin}{\textwidth}{.4pt}
+%\makefootrule{sitin}{\textwidth}{.4pt}{0.1cm}LargeAULogo
+
+\pagestyle{sitin}
+
+
+%-------- Skriv afleveringdfrist
+\date {04. februar 2015}
+
+
+\begin{document}
+%\begin{titlingpage} \maketitle \end{titlingpage}
+%\begin{titlingpage} \tableofcontents \end{titlingpage}
+%----------------------Her skriver du din opgave-------------------%
+
+\section{Indledning}
+Dette er gruppekontrakten for gruppen "HTTP/1.1 418".
+Kontrakten beskriver gruppens - i enighed - vedtagne regler og retningslinier for medlemmernes faglige aktiviteter under IT bachelor studiet på Aarhus Universitet.
+NOTE: Dette er en kladde. Intet er vedtaget.\\
+Gruppen består af:
+\subsection{Gruppemedlemmer}
+\begin{tabular}{ l | l | l | l }
+    Navn & Studie\# $\triangle$ & Mobil\# & Email \\ \hline
+    Mark Robert Nygaard Moore & 20061263 & 24 40 49 72 & mark@moore.dk \\ \hline
+    Sebastian Skjold Højsted & 201407642 & 31 24 01 33 & sthazeb@gmail.com \\ \hline
+	Rasmus Mølgaard Hansen & 201408297 & 23 96 29 77 & ramusmh@gmail.com \\ \hline
+    Silas Roswall & 201408919 & 25 88 45 86 & silasrw@gmail .com
+\end{tabular}
+\label{subsec:medlemmer}
+\section{Vedtægter}
+\subsection{Mødetider}
+Vi møder til den skemalagte tid - med akademisk kvarter, hvor det gør sig gældende.
+Bliver man mere end 15 minutter forsinket meddeles dette til mindst ét andet gruppemedlem. (fx via sms eller facebook)
+Modtager man sms om forsinkelse mens man selv er forsinket, gives beskeden videre.
+\subsection{Ugentligt Møde}
+Gruppen holder møde en gang om ugen, primært med henblik på at få overblik over uddelegerede, og kommende, opgaver.
+\subsubsection{Udkast til dagsorden for ugentligt gruppemøde:}
+\begin{enumerate}
+\item Kaffe
+\item Status på opgaver
+\begin{enumerate}
+\item Hvad er done?
+\item Hvad mangler?
+\item Hvad halter? - Hvorfor?
+\item Uddelegering / redelegering af opgaver.
+\item Ansvarlinge for aflevering af ugens opgaver.
+\end{enumerate}
+\item Planlægning af ugen:
+\begin{enumerate}
+\item Hvad gør vi hvornår? (og hvor mødes vi)?
+\item Afbud?
+\end{enumerate}
+\item evt.
+\end{enumerate}
+\subsection{Gruppearbejde}
+Gruppen arbejder så vidt muligt sammen i alle kurser da dette letter planlægningen af ugen.
+Gruppen registrerer sig på de relevante kursussider, efter kursernes kravsatte omfang.
+Det forventes at gruppemedlemmer påregner tid til gruppearbejde udenfor den skemalagte tid. Dette aftales løbende på det ugentlige møde, gerne i god tid.
+Det forventes at gruppemedlemmer holder sig orienteret på facebook gruppen, og på fagportalerne.
+\subsection{Afleveringer}
+Der udpeges en "ansvarlig for aflevering"  pr. aflevering, som sørger for at en opgave afleveres/uploades til tiden.
+\section{Ved Overtrædelse}
+TODO: specificér nærmere\\
+De øvrige gruppemedlemmer ser på de enkelte tilfælde af overtrædelser, og gransker alvorligheden af disse.\\
+Straf kan udmåles fra kaffe til udelukkelse.
+\section{Ændringer / overruling}
+Bestemmelserne i gruppekontrakten kan til enhver tid ændres, såfremt gruppemedlemmerne bliver enige om en ændring.
+\end{document}
